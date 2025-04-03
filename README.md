@@ -68,67 +68,36 @@ Les fonctionnalités bonus ajoutent une expérience utilisateur plus riche :
 
 ## Installation et Compilation
 Clonez le projet depuis GitHub et compilez-le avec `make` :
-git clone <URL_du_projet> cd minishell make
+- git clone <URL_du_projet>
+- cd 
+- minishell
+- make
 
 Pour compiler avec les bonus :
-make bonus
-
+- make bonus
 ---
 
 ## Exemple d'Utilisation
 
 ### Partie Obligatoire
 Lancez le shell avec la commande suivante :
+
+```
 ./minishell
+```
 Exemple d'exécution interactive :
+
+```
 minishell$ echo “Hello World” Hello World minishell$ ls | grep .c > files.txt minishell$ cat files.txt
+```
 
 ### Bonus : Opérateurs Logiques et Parenthèses
 Exemples avec opérateurs logiques et parenthèses :
+
+``
 minishell$ mkdir test && cd test || echo “Erreur” minishell$ (echo “OK” && ls) || echo “KO”
+``
 
 ---
 
-## Structure du Projet
 
-| Fichier                  | Description                          |
-|--------------------------|--------------------------------------|
-| `minishell.c`            | Implémentation principale            |
-| `lexer.c`                | Analyse lexicale (découpe en tokens) |
-| `parser.c`               | Analyse syntaxique                   |
-| `executor.c`             | Exécution des commandes              |
-| `builtin.c`              | Implémentation des commandes internes|
-| `redirect.c`             | Gestion des redirections             |
-| `pipe.c`                 | Gestion des pipes                    |
-| `bonus/logical_ops.c`    | Gestion des opérateurs logiques       |
-| `bonus/parentheses.c`    | Gestion des parenthèses              |
-| `bonus/heredoc.c`        | Implémentation du heredoc            |
-| `bonus/wildcards.c`      | Gestion des wildcards                |
-
----
-
-## Tests
-Pour tester le projet, lancez différentes combinaisons de commandes interactives ou via un script. Exemple :
-- Partie obligatoire :
-./minishell
-- Bonus (opérateurs logiques et parenthèses) :
-./minishell << EOF
-
----
-
-## Ressources Utiles
-- Tutoriel vidéo : *Understanding Unix Shells*.
-- Documentation sur les fonctions système (`fork()`, `execve()`, etc.).
-- Guide sur la gestion avancée des signaux.
-
----
-
-## Auteur
-Projet réalisé dans le cadre du cursus 42.
-
-| Info         | Détails                  |
-|--------------|--------------------------|
-| Nom          | Votre Nom                |
-| Login 42     | votre_login              |
-
-N'hésitez pas à poser vos questions ou à contribuer !
