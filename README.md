@@ -100,4 +100,8 @@ minishell$ mkdir test && cd test || echo “Erreur” minishell$ (echo “OK�
 
 ---
 
+## Authors
+- Arthur Oger | 42: aoger | GitHub: arthoge
+- Alexandre Scordilis | 42: ascordil | GitHub: lachignol
+
 
